@@ -42,17 +42,31 @@
     td:nth-child(2) span {
       position: absolute; top: 7px; left: 3px;
     }
-		
-	
 	</style>
 </head>
 
 <body>
 
-
-	<h1>HTML5 Canvas Chart Demo</h1>
+	<h1>Tea Game Analysis</h1>
 
 	<canvas id="blobs">
+		<table class="data" width="400" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			  <th scope="col">Name</th>
+			  <th scope="col">Loses</th>
+			</tr>
+			<?php 
+			foreach($rows as $row)
+			{
+				if($row['name']!="" && $row['loses']!=""){
+					echo "
+					<tr>
+						<td>".$row['name']."</td>
+						<td>".$row['loses']."</td>
+					</tr>";
+				}
+			}?>
+		</table>
 	</canvas>
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
