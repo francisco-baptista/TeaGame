@@ -9,11 +9,11 @@ set_include_path(get_include_path() . PATH_SEPARATOR . "$_SERVER[DOCUMENT_ROOT]/
  
 include_once("Google_Spreadsheet.php");
 
-//include_once("Config.php");
+include_once("Config.php");
  
-$u = GOOGLE_USERNAME;
-$p = GOOGLE_PASSWORD;
-$p = GOOGLE_KEY;
- 
-$ss = new Google_Spreadsheet($u,$p);
+$ss = new Google_Spreadsheet(GOOGLE_USERNAME,GOOGLE_PASSWORD);
 $ss->useSpreadsheet("TeaStats");
+$ss->useWorksheet("Sheet1");
+ 
+$rows = $ss->getRows('Room="1stFloorServices"');
+ 
