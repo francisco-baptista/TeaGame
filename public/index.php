@@ -4,9 +4,6 @@
  * @author @tomboa @
  */
 
-// Zend library include path
-set_include_path(get_include_path() . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'] . "/ClockTeaGame/ZendGdata-1.11.11/library");
- 
 include_once("Google_Spreadsheet.php");
 
 include_once("Config.php");
@@ -21,5 +18,3 @@ try {
 	echo "Error, unable to get spreadsheet data" . $e;
 }
  
-
-include_once("View.php");
