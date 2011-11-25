@@ -17,8 +17,6 @@ $ss->useWorksheet("Sheet1");
 
 try {
 	$rows = $ss->getRows();
- 
-echo "<pre>"; print_r($rows);echo "</pre>";
 } catch (Exception $e) {
 	echo "Error, unable to get spreadsheet data" . $e;
 }
