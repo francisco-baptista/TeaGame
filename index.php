@@ -23,3 +23,5 @@ echo "<pre>"; print_r($rows);echo "</pre>";
 	echo "Error, unable to get spreadsheet data" . $e;
 }
  
+
+include_once("View.php");
