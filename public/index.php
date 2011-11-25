@@ -18,3 +18,4 @@ try {
 	echo "Error, unable to get spreadsheet data" . $e;
 }
  
+include_once("View.php");
